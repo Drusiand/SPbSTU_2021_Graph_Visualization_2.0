@@ -1,4 +1,4 @@
-import pytest
+import pytest  # type: ignore
 from python.graph import Graph
 import networkx as nx  # type: ignore
 from python.graph_algorithms import dfs, bfs
