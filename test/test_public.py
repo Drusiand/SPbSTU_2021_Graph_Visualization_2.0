@@ -8,14 +8,14 @@ def test_graph_build():
     """
     Test function to check if graphs vere initialized as expected
     """
-    graph_letters = Graph.build_graph_from_file("data/graph_example/graph_letters.txt")
-    graph_numbers = Graph.build_graph_from_file("data/graph_example/graph_numbers.txt")
+    graph_letters = Graph.build_graph_from_file("./data/graph_example/graph_letters.txt")
+    graph_numbers = Graph.build_graph_from_file("./data/graph_example/graph_numbers.txt")
     wrong_graph_count = 0
     try:
-        Graph.build_graph_from_file("data/graph_example/graph_incorrect.txt")
+        Graph.build_graph_from_file("./data/graph_example/graph_incorrect.txt")
     except ValueError:
         wrong_graph_count += 1
-    graph_empty = Graph.build_graph_from_file("data/graph_example/graph_empty.txt")
+    graph_empty = Graph.build_graph_from_file("./data/graph_example/graph_empty.txt")
     if len(graph_empty.get_graph_dict()) == 0:
         wrong_graph_count += 1
     assert wrong_graph_count == 2
