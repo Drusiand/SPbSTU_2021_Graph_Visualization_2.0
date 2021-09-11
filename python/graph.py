@@ -1,8 +1,8 @@
 from collections import defaultdict
 from python.graph_parser import GraphParser
-import networkx as nx
-import matplotlib.pyplot as plt
-from python.gif_builder import GifBuilder
+import networkx as nx  # type: ignore
+import matplotlib.pyplot as plt  # type: ignore
+from python.gif_builder import GifBuilder  # type: ignore
 
 
 class Graph:

@@ -1,4 +1,9 @@
+from typing import List, Any, Union
+
+
 class Stack:
+    __data: List = list()
+
     """
 
     Stack implementation
@@ -20,7 +25,6 @@ class Stack:
             Check if stack is empty
 
     """
-    __data = list()
 
     def add(self, added_element: str) -> None:
         """
@@ -35,7 +39,7 @@ class Stack:
         """
         self.__data.append(added_element)
 
-    def get(self) -> any:
+    def get(self) -> Any:
         """
 
         Getting stack element
@@ -61,6 +65,8 @@ class Stack:
 
 
 class Queue:
+    __data: List = list()
+
     """
 
     Queue implementation
@@ -82,7 +88,6 @@ class Queue:
             Check if queue is empty
 
     """
-    __data = list()
 
     def add(self, added_element: str):
         """
@@ -122,7 +127,7 @@ class Queue:
         return len(self.__data) == 0
 
 
-def graph_traversal(graph, start: str, container_class: Queue or Stack) -> list:
+def graph_traversal(graph, start: str, container_class: Union[Stack, Queue]) -> list:
     """
 
     General traversal function
@@ -145,7 +150,7 @@ def graph_traversal(graph, start: str, container_class: Queue or Stack) -> list:
     """
     visited_nodes = set()
     order = list()
-    container = container_class()
+    container = container_class
     container.add(start)
     while not container.is_empty():
         visited_node = container.get()
@@ -176,7 +181,7 @@ def dfs(graph, start: str) -> list:
     DFS traversal order (depends on chosen container)
 
     """
-    return graph_traversal(graph, start, Stack)
+    return graph_traversal(graph, start, Stack())
 
 
 def bfs(graph, start: str) -> list:
@@ -197,4 +202,4 @@ def bfs(graph, start: str) -> list:
     BFS traversal order (depends on chosen container)
 
     """
-    return graph_traversal(graph, start, Queue)
+    return graph_traversal(graph, start, Queue())

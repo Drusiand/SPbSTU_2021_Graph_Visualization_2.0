@@ -1,5 +1,5 @@
-import matplotlib.pyplot as plt
-from celluloid import Camera
+import matplotlib.pyplot as plt  # type: ignore
+from celluloid import Camera  # type: ignore
 
 
 def get_frames(graph, traversal_order: list, unvisited_node_color: str = "red",
@@ -50,6 +50,7 @@ class GifBuilder:
                 gif builder
 
     """
+
     @staticmethod
     def build(graph, gif_options: dict) -> bool:
         """
