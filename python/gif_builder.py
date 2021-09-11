@@ -75,7 +75,7 @@ class GifBuilder:
             fig = plt.figure()
             camera = Camera(fig)
             for frame in frames:
-                graph.draw(show_plot=False, frame=frame)
+                graph.draw(show_plot=False, node_colors=frame)
                 camera.snap()
             animation = camera.animate(interval=1000)
             animation.save(gif_name)

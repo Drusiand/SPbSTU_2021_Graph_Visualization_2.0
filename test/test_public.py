@@ -48,6 +48,6 @@ def test_DFS():
 
 def test_gif_builder():
     for valid_graph in valid_graphs:
-        opts = {"data/gif_test/bfs.gif": bfs(valid_graph, valid_graph.get_start()),
-                "data/gif_test/dfs.gif": dfs(valid_graph, valid_graph.get_start())}
+        opts = {"./data/gif_test/bfs.gif": bfs(valid_graph, valid_graph.get_start()),
+                "./data/gif_test/dfs.gif": dfs(valid_graph, valid_graph.get_start())}
         valid_graph.build_gif(opts)
