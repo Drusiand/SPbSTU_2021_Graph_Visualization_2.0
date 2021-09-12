@@ -40,3 +40,4 @@ jobs:
       uses: sphinx-notes/pages@1.0
       with:
         documentation_path: docs
+        target_branch: documentation
