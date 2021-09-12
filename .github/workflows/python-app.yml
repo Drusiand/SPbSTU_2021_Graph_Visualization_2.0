@@ -37,18 +37,8 @@ jobs:
       run: |
         pytest
                 
-    - name: Checkout
-      uses: actions/checkout@gh-pages
-      with:
-        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-        
-    - name: Build and Commit
-      uses: sphinx-notes/pages@gh-pages
-      with:
-        documentation_path: docs
-        
-    - name: Push changes
-      uses: ad-m/github-push-action@gh-pages
+    - name: Push Sphinx Pages
+      uses: seanzhengw/sphinx-pages@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: gh-pages
+        create_readme: true
