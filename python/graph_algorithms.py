@@ -2,18 +2,14 @@ from typing import List, Any, Union
 
 
 class Stack:
-    __data: List = list()
-
     """
 
     Stack implementation
 
-    Attributes
-    ----------
-    __data: list
+    :parameter __data: list
             Stack data
 
-    Methods
+    :Methods:
     ----------
     add(self, added_element: str) -> None
             Adding new element in stack
@@ -25,15 +21,14 @@ class Stack:
             Check if stack is empty
 
     """
+    __data: List = list()
 
     def add(self, added_element: str) -> None:
         """
 
         Adding new element in stack
 
-        Parameters
-        ----------
-        added_element:  str
+        :param added_element:  str
                         new stack element
 
         """
@@ -44,9 +39,8 @@ class Stack:
 
         Getting stack element
 
-        Returns
-        ----------
-        Available stack element
+        :return: Any:
+                Available stack element
 
         """
         return self.__data.pop()
@@ -56,27 +50,21 @@ class Stack:
 
         Check if stack is empty
 
-        Returns
-        ----------
-        True, if stack is empty; False otherwise
+        :return: bool:
+                True, if stack is empty; False otherwise
 
         """
         return len(self.__data) == 0
 
 
 class Queue:
-    __data: List = list()
-
     """
-
     Queue implementation
 
-    Attributes
-    ----------
-    __data: list
+    :parameter __data: list
             Queue data
 
-    Methods
+    :Methods:
     ----------
     add(self, added_element: str) -> None
             Adding new element in queue
@@ -89,39 +77,37 @@ class Queue:
 
     """
 
-    def add(self, added_element: str):
+    __data: List = list()
+
+    def add(self, added_element: str) -> None:
         """
 
         Adding new element in queue
 
-        Parameters
-        ----------
-        added_element:  str
+        :param added_element:  str
                         new queue element
 
         """
         self.__data.append(added_element)
 
-    def get(self):
+    def get(self) -> Any:
         """
 
         Getting queue element
 
-        Returns
-        ----------
-        Available queue element
+        :return: Any:
+                Available queue element
 
         """
         return self.__data.pop(0)
 
-    def is_empty(self):
+    def is_empty(self) -> bool:
         """
 
         Check if queue is empty
 
-        Returns
-        ----------
-        True, if queue is empty; False otherwise
+        :return: bool:
+                True, if queue is empty; False otherwise
 
         """
         return len(self.__data) == 0
@@ -132,20 +118,17 @@ def graph_traversal(graph, start: str, container_class: Union[Stack, Queue]) -> 
 
     General traversal function
 
-    Parameters
-    ----------
-    graph:  Graph
+    :param graph:  Graph
             Graph instance
 
-    start:  str
+    :param start:  str
             Graph traversal start node
 
-    container_class: Queue or Stack
+    :param container_class: Queue or Stack
             temporary container for graph traversal
 
-    Returns
-    ----------
-    Traversal order (depends on chosen container)
+    :return: list:
+            Traversal order (depends on chosen container)
 
     """
     visited_nodes = set()
@@ -168,17 +151,14 @@ def dfs(graph, start: str) -> list:
 
     DFS traversal function
 
-    Parameters
-    ----------
-    graph:  Graph
+    :param graph:  Graph
             Graph instance
 
-    start:  str
+    :param start:  str
             Graph traversal start node
 
-    Returns
-    ----------
-    DFS traversal order (depends on chosen container)
+    :return: list:
+            DFS traversal order (depends on chosen container)
 
     """
     return graph_traversal(graph, start, Stack())
@@ -189,17 +169,14 @@ def bfs(graph, start: str) -> list:
 
     BFS traversal function
 
-    Parameters
-    ----------
-    graph:  Graph
+    :param graph:  Graph
             Graph instance
 
-    start:  str
+    :param start:  str
             Graph traversal start node
 
-    Returns
-    ----------
-    BFS traversal order (depends on chosen container)
+    :return: list:
+            BFS traversal order (depends on chosen container)
 
     """
     return graph_traversal(graph, start, Queue())

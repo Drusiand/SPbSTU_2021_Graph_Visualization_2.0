@@ -8,23 +8,20 @@ def get_frames(graph, traversal_order: list, unvisited_node_color: str = "red",
 
     Get color frames of based on graph traversal order
 
-    Parameters
-    ----------
-    graph:  Graph
+    :param graph:  Graph
             Graph instance
 
-    traversal_order:    list
+    :param traversal_order:    list
                         input graph traversal order
 
-    unvisited_node_color:   str
+    :param unvisited_node_color:   str
                             color of unvisited graph node
 
-    visited_node_color:     str
+    :param visited_node_color:     str
                             color of visited graph node
 
-    Returns
-    ----------
-    list of traversal frames
+    :return: list:
+            list of traversal frames
 
     """
     frames = list()
@@ -44,7 +41,7 @@ class GifBuilder:
 
     Gif builder implementation
 
-    Methods
+    :Methods:
     ---------
     build(graph, gif_options: dict) -> bool
                 gif builder
@@ -57,17 +54,14 @@ class GifBuilder:
 
         gif builder
 
-        Parameters
-        ----------
-        graph:  Graph
+        :param graph:  Graph
                 Graph instance
 
-        gif_options:    dict
+        :param gif_options:    dict
                         dictionary with desired gif name as key and desired traversal order as value
 
-        Returns
-        ---------
-        True, if gifs build successfully; False otherwise
+        :return: bool:
+                True, if gifs build successfully; False otherwise
 
         """
         for gif_name in gif_options:
