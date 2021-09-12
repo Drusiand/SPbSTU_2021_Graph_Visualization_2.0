@@ -38,3 +38,5 @@ jobs:
         pytest
     - name: Sphinx to GitHub Pages
       uses: sphinx-notes/pages@1.0
+      with:
+        documentation_path: docs
