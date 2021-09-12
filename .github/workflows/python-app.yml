@@ -52,5 +52,5 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages
         
-    - name: Mypy Check
-      uses: jpetrucciani/mypy-check@0.910
+    # - name: Mypy Check
+    #  uses: jpetrucciani/mypy-check@0.910
