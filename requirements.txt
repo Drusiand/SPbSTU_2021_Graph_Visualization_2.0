@@ -4,3 +4,4 @@ pytest
 matplotlib
 celluloid
 networkx
+sphinx-rtd-theme
