@@ -1,6 +1,6 @@
 # Graph visualization
 
-This is a simple student project designed for visualization deep-first search (DFS) and breadth-first search (BFS) algorithms (currently using matploib). Output data is stored in gif-files with corresponding names. Examples are represented in "gif" directory.
+This is a simple student project designed for visualization deep-first search (DFS) and breadth-first search (BFS) algorithms (currently using matploib). Output data is stored in gif-files with corresponding names.
 
 
 ## Installation
