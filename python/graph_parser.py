@@ -6,7 +6,7 @@ class GraphParser:
 
     Graph parser implementation
 
-    Methods
+    :Methods:
     ----------
     parse_graph(source: str, node_edges_delimiter=":", token_delimiter=",") -> defaultdict
                 parsing graph from txt-file
@@ -19,21 +19,17 @@ class GraphParser:
 
         Parsing graph from txt-file
 
-        Parameters
-        ----------
-        source: str
+        :param source: str
                 name of desired txt-file
 
-        token_delimiter:
+        :param token_delimiter:
                 delimiter between current node and adjacent ones
 
-        node_edges_delimiter:
+        :param node_edges_delimiter:
                 delimiter among nodes adjacent to the certain one
 
-        Returns
-        ----------
-        parsed_graph:   defaultdict
-                        graph represented by dictionary {node: edges}
+        :return: defaultdict:
+                graph represented by dictionary {node: edges}
 
         """
         parsed_graph = defaultdict(list)
